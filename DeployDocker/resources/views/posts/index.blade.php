@@ -30,22 +30,9 @@
                 <h4>Here are some popular recipes: </h4>
             </div>
         </div>
-        <div class="row pt-5">
-
-            <div class="col-4">
-                <img src="img/macrons.jpg" class="w-100" style="height:350px; width=250px;" alt="">
-            </div>
-            <div class="col-4">
-                <img src="img/eggs.jpg" class="w-100" style="height:350px; width=150px;" alt="">
-            </div>
-            <div class="col-4">
-                <img src="img/saucers.jpg" class="w-100" style="height:350px; width=250px;" alt="">
-            </div>
-        </div>
-    </div>
 
     <div class="row pt-5">
-        @foreach($user->posts as $post)
+        @foreach($posts as $post)
             <div class="col-md-4 pb-4">
                 @include('layouts/postbuild')
             </div>
