@@ -20,7 +20,6 @@ class CreatePostsTable extends Migration
             $table->string('title');
             $table->string('image');
             $table->timestamps();
-
             $table->string('ingredients');
             $table->string('servings');
             $table->integer('c_time');

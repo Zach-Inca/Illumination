@@ -80,7 +80,11 @@ class PostsController extends Controller
      */
     public function show($id)
     {
-        //
+        $post = Post::findorfail($id);
+
+        return view('posts.show',[
+            'post' => $post
+        ]);
     }
 
     /**
@@ -91,7 +95,9 @@ class PostsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $post = Post::findorfail($id);
+        dd($post);
+        return view('posts.create');
     }
 
     /**
