@@ -2,18 +2,17 @@
 
 @section('content')
 <div class="container">
-    <div class="row">
-        <div class="col-xs-3 p-5">
+    <div class="row pl-3 pr-3">
+        <div class="col-xs-3 pr-5">
             <img src="{{ $user->profile->profileImage() }}" alt="" class="w-100 rounded-circle" style="height:150px;">
         </div>
-        <div class="col-xs-6 pt-5">
+        <div class="col-xs-6 pt-2">
             <div class="pb-3">
                 <div class="d-flex justify-content-between align-items-baseline">
-                    <div class="d-flex">
-                        <h3>{{ $user->name }}</h3>
+                    <div class="d-flex align-items-center pb-2">
+                        <div class="h4">{{ $user->name }}</div>
 
-                        <follow-button>
-                        </follow-button>
+                        <follow-button user-id="{{ $user->id }}"></follow-button>
                     </div>
 
                     @can('update', $user->profile)
@@ -30,8 +29,8 @@
 
             <div class="d-flex">
                 <div class="pr-4 pb-4"><strong>{{ $user->posts->count() }}</strong> posts</div>
-                <div class="pr-4 pb-4"><strong>54</strong> posts</div>
-                <div class="pr-4 pb-4"><strong>32</strong> posts</div>
+                <div class="pr-4 pb-4"><strong>54</strong> followers</div>
+                <div class="pr-4 pb-4"><strong>32</strong> following</div>
             </div>
 
 
