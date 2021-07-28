@@ -26,7 +26,7 @@
                 <h4>Here are some popular recipes: </h4>
             </div>
         </div>
-
+    </div>
     <div class="row pt-5">
         @foreach($posts as $post)
             <div class="col-md-4 pb-4">

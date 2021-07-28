@@ -37,15 +37,12 @@ class ProfilesController extends Controller
 
         if (request('image')) {
             $imagePath = request('image')->store('profile', 'public');
+            $imageArray = ['imag' => $imagePath];
         }
-        else{
-            $imagePath = null;
-        }
-
 
         auth()->user()->profile->update(array_merge(
             $data,
-            ['image' =>$imagePath]
+            $imageArray ?? []
         ));
 
 
