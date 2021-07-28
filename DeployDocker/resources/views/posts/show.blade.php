@@ -3,10 +3,9 @@
 @section('content')
 <div class="container">
 
-    <div class="row">
+    <div class="row justify-content-center">
 
-        <div class="col-md-4"></div>
-        <div class="col-md-4 pb-4">
+        <div class="pb-4">
             @include('layouts/postbuild')
         </div>
     </div>

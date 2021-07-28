@@ -29,7 +29,7 @@
     </div>
     <div class="row pt-5">
         @foreach($posts as $post)
-            <div class="col-md-4 pb-4">
+            <div class="col-lg-4 pb-4">
                 @include('layouts/postbuild')
             </div>
         @endforeach
