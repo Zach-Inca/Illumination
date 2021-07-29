@@ -23,7 +23,7 @@
     <div class="row">
         <div class="col-9 pt-5">
             <div>
-                <h4>Here are tailoared recipes from yours followers: </h4>
+                <h4>Here are some popular recipes: </h4>
             </div>
         </div>
     </div>
@@ -33,12 +33,7 @@
                 @include('layouts/postbuild')
             </div>
         @endforeach
-        <div class="row">
-            <div class="col-12 d-flex justify-content-center">
-                {{ $posts->links() }}
-            </div>
-
-        </div>
+    
     </div>
     
 </div>

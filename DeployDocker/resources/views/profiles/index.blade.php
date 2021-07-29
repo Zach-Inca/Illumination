@@ -28,9 +28,9 @@
 
 
             <div class="d-flex">
-                <div class="pr-4 pb-4"><strong>{{ $postCount }}</strong> posts</div>
-                <div class="pr-4 pb-4"><strong>{{ $followerCount }}</strong> followers</div>
-                <div class="pr-4 pb-4"><strong>{{ $followingCount }}</strong> following</div>
+                <div class="pr-5 pb-4"><strong>{{ $postCount }}</strong> posts</div>
+                <div class="pr-5 pb-4"><strong>{{ $followerCount }}</strong> followers</div>
+                <div class="pr-5 pb-4"><strong>{{ $followingCount }}</strong> following</div>
             </div>
 
 
