@@ -15,11 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 Auth::routes();
 
-Route::post('follow/{user}', function (){
-    return ['success'];
-});
+Route::post('follow/{user}', [\App\Http\Controllers\FollowsController::class, 'store'])->middleware('auth');
 
-Route::get('/', [\App\Http\Controllers\PostsController::class, 'index']);
+Route::get('/', [\App\Http\Controllers\PostsController::class, 'index'])->middleware('auth');
 Route::get('/post/create',  [App\Http\Controllers\PostsController::class, 'create'])->middleware('auth');
 /*Route::get('/post/edit', \App\Http\Controllers\PostsController::class, 'edit')->middleware(('auth'));*/
 Route::post('/post',  [App\Http\Controllers\PostsController::class, 'store']);

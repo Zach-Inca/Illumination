@@ -9,6 +9,6 @@ class FollowsController extends Controller
 {
    public function store(User $user)
    {
-       # code...
+       return auth()->user()->following()->toggle($user->profile);
    }
 }

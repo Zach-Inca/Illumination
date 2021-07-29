@@ -27,12 +27,18 @@
             </div>
         </div>
     </div>
-    <div class="row pt-5">
+    <div class="row pt-5 pb-4">
         @foreach($posts as $post)
-            <div class="col-lg-4 pb-4">
+            <div class="col-lg-6 offset-3">
                 @include('layouts/postbuild')
             </div>
         @endforeach
+        <div class="row">
+            <div class="col-12 d-flex justify-content-center">
+                {{ $posts->links() }}
+            </div>
+
+        </div>
     </div>
     
 </div>

@@ -58,7 +58,7 @@ class User extends Authenticatable
 
     public function following()
     {
-        return $this->belongstoManyMany(Profile::class);
+        return $this->belongstoMany(Profile::class);
     }
 
     public function profile()

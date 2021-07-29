@@ -10,8 +10,19 @@ class ProfilesController extends Controller
 {
     public function index(User $user)
     {
+        $follows = (auth()->user()) ? auth()->user()->following->contains($user) : false;
+
+        $postCount = $user->posts->count();
+        $followerCount = $user->profile->followers->count();
+        $followingCount = $user->following->count();
+
         return view('profiles.index', [
             'user' => $user,
+            'follows' => $follows,
+            'postCount' => $postCount,
+            'followerCount' => $followerCount,
+            'followingCount' => $followingCount,
+
         ]);
     }
 
@@ -37,7 +48,7 @@ class ProfilesController extends Controller
 
         if (request('image')) {
             $imagePath = request('image')->store('profile', 'public');
-            $imageArray = ['imag' => $imagePath];
+            $imageArray = ['image' => $imagePath];
         }
 
         auth()->user()->profile->update(array_merge(
