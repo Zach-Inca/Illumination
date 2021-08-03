@@ -2,9 +2,9 @@
 
 @section('content')
 <div class="container">
-    <div class="row pl-3 pr-3">
+    <div class="row justify-content-md-center">
         <div class="col-xs-3 pr-5">
-            <img src="{{ $user->profile->profileImage() }}" alt="" class="w-100 rounded-circle" style="height:150px;">
+            <img src="{{ $user->profile->profileImage() }}" alt="" class="w-100 rounded-circle" style="height:200px;">
         </div>
         <div class="col-xs-6 pt-2">
             <div class="pb-3">

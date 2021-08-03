@@ -1,6 +1,6 @@
 
     
-        <a href="post/{{ $post->id }}"><img src="/storage/{{ $post->image }}" class="w-100" style="height:350px; width:250px;" alt=""></a>
+        <a href="post/{{ $post->id }}"><img src="/storage/{{ $post->image }}" class="w-100"  alt=""></a>
 
         <p> <b>Title:</b> {{ $post->title }} </p>
 
