@@ -1,3 +1,5 @@
 
 *.00000001
 mysql/
+src/.DS_Store
+src/.DS_Store
